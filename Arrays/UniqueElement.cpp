@@ -2,16 +2,30 @@
 
 using namespace std;
 
+// void printDuplicateElements(int arr[], int size) {
+//     for (int i = 0; i < size-1; i++) {  
+//         for (int j = i+1; j < size; j++) {
+//             if (arr[i] == arr[j]) {
+//                 cout << arr[i] << " ";
+//             }
+//         }
+//     }
+//     cout << endl;
+// }
+
 void printDuplicateElements(int arr[], int size) {
-    for (int i = 0; i < size-1; i++) {  
+    for (int i = 0; i < size; i++) {
         for (int j = i+1; j < size; j++) {
-            if (arr[i] == arr[j]) {
+            if (i != j && arr[i] == arr[j]) {
                 cout << arr[i] << " ";
+                // cout << i << "->" << j << "->> "<<arr[i] << " ";
+                break;
             }
         }
     }
     cout << endl;
-}
+} 
+
 
 // void printUniqueElements(int arr[], int size) {
 //     bool isUnique = true;
@@ -47,15 +61,15 @@ void printUniqueElements(int arr[], int size) {
 
 int main() {
 
-    int arr[10] = {5,4,3,5,1,3,7,9,0,4};
+    int arr[11] = {5,4,3,5,1,3,7,9,0,4,5};
 
     cout << "Duplicate elements are: ";
 
-    printDuplicateElements(arr, 10);
+    printDuplicateElements(arr, 11);
 
     cout << "Unique elements are: ";
 
-    printUniqueElements(arr, 10);
+    printUniqueElements(arr, 11);
 
     return 0;
 }
