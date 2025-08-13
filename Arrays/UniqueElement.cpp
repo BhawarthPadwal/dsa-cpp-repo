@@ -57,6 +57,16 @@ void printUniqueElements(int arr[], int size) {
             cout << arr[i] << " ";
         }
     }
+    cout << endl;
+}
+
+void printUniqueElement2(int arr[], int size) {
+
+    int ans = 0;
+    for (int i = 0; i < size; i++) {
+        ans = ans ^ arr[i];
+    }
+    cout << ans << endl;
 }
 
 int main() {
@@ -70,6 +80,9 @@ int main() {
     cout << "Unique elements are: ";
 
     printUniqueElements(arr, 11);
+
+
+    printUniqueElement2(arr, 11); // This method is used for specific case   
 
     return 0;
 }
